@@ -10,6 +10,5 @@
 
 ## 분류
 ### Computer Engineering
-
-#### C언어
-#### 자료구조
+* C언어
+* 
