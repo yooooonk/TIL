@@ -57,3 +57,41 @@ int main(void) {
 }
 ```
 ### _연결 리스트_
+- 일반적으로 구조체와 포인터를 함께 사용하여 구현한다
+- 연결 리스트는 리스트 중간 지점에 노드를 추가하거나 삭제할 수 있어야 한다
+- 필요할 때마다 메모리 공간을 할당 받는다
+#### 단일연결 리스트
+- 포인터를 이용해 단방향으로 다음 노드를 가리킴  
+ex] data|next(Head) -> data|next(일반노드) -> data|next(일반노드) -> NULL
+- 하나의 구조체 안에 두개의 변수 = 데이터를 받는 변수+다음 노드를 가리키는 포인터변수
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct { //구조체
+	int data;
+	struct Node* next;
+} Node;
+
+Node* head;
+
+int main(void) {
+
+	head = (Node*)malloc(sizeof(Node));
+	Node* node1 = (Node*)malloc(sizeof(Node));
+	node1->data = 1;
+	Node* node2 = (Node*)malloc(sizeof(Node));
+	node2->data = 2;
+	head->next = node1;
+	node1->next = node2;
+	node2->next = NULL;
+	Node* cur = head->next;
+	while (cur != NULL) {
+		printf("%d ", cur->data);
+		cur = cur->next;
+	}
+	system("pause");
+	return 0;
+}
+```

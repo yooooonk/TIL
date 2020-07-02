@@ -16,5 +16,9 @@
 - [전처리기 Preprocessor](https://yooooon51.tistory.com/21?category=786789)
 
 ## Data Structure 자료구조(20.07 ~ )
-- [개요 Outline]()
-- [리스트 List]()
+- [개요 Outline](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-%20outline.md)
+- [리스트 List](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-linkedList.md)
+
+
+
+
