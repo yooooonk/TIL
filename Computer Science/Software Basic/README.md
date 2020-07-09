@@ -20,5 +20,7 @@
 - [리스트 List](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-linkedList.md)
 - [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-stack.md)
 - [스택을 활용한 계산기 만들기](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-stackCalculator.md)
-
+- [큐 Queue](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-queue.md)
+- [선택정렬/삽입정렬 Selection/Insertion Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-sort1.md)
+- [퀵 정렬 Quick Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-sort2.md)
 
