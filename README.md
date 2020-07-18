@@ -14,6 +14,6 @@
 
 
 
-###  Computer  :whale:
+###  Computer Science :whale:
 * C언어
 * 자료구조
