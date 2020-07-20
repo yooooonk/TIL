@@ -32,3 +32,5 @@
 - [깊이우선탐색 Depth First Tree / 너비우선탐색 Breadth First Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20search2.md
 )
 - [이진 탐색 트리](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20BinarySearchTree.md)
+- [AVL Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20AVL%20Tree.md)
+- [Hash](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20Hash.md)
