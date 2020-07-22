@@ -15,7 +15,7 @@
 - [파일입출력 File I/O](https://yooooon51.tistory.com/20?category=786789)
 - [전처리기 Preprocessor](https://yooooon51.tistory.com/21?category=786789)
 
-## Data Structure 자료구조(20.07 ~ )
+## Data Structure 자료구조
 - [Big-O 표기법](https://yooooon51.tistory.com/22)
 - [개요 Outline](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-%20outline.md)
 - [리스트 List](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-linkedList.md)
@@ -34,3 +34,6 @@
 - [이진 탐색 트리](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20BinarySearchTree.md)
 - [AVL Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20AVL%20Tree.md)
 - [Hash](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20Hash.md)
+- [AVL Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20AVL%20Tree.md)
+- [최소 신장 트리 Minimum Spanning Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20MST.md)
+- [Segment Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20segment%20Tree.md)
