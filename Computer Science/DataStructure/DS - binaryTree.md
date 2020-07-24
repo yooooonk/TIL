@@ -84,3 +84,6 @@ int main(void) {
 	printf("\n");
 }
 ```
+---
+__REFERENCE__
+- fastcampus 컴퓨터 공학 전공 필수 [소프트웨어 베이직 - 나동빈]

@@ -1,8 +1,8 @@
-# 컴퓨터공학 / 소프트웨어 베이직  
-
+# 자료구조 / 알고리즘  
+&#128516; reference는 각 파일 아래에 명시했습니다
 
 ## C언어
-필요한 내용만 블로그에 정리
+
 - [연산자 operator](https://yooooon51.tistory.com/11?category=786789)
 - [조건문 Conditional Statements](https://yooooon51.tistory.com/12?category=786789)
 - [포인터 Pointer](https://yooooon51.tistory.com/13?category=786789)
@@ -36,4 +36,10 @@
 - [Hash](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20Hash.md)
 - [AVL Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20AVL%20Tree.md)
 - [최소 신장 트리 Minimum Spanning Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20MST.md)
+- [Dijkstara's Algorithm](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20Dijkstra's.md)
 - [Segment Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20segment%20Tree.md)
+- [Index Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20index%20tree.md)
+- [KMP algorithm](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20KMP%20algorithm.md)
+- [Rabin-karp algorithm](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20rabin-karp.md)
+
+

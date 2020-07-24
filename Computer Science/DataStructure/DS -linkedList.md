@@ -216,3 +216,6 @@ int main(void) {
 }
 ```
 => 1 3 5 7 8 9
+---
+__REFERENCE__
+- fastcampus 컴퓨터 공학 전공 필수 [소프트웨어 베이직 - 나동빈]
