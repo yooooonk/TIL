@@ -4,12 +4,13 @@
 
 - 비전공자라 부족할 수 있는 지식을 채우기 위해 시간을 들여 꾸준히 공부해나가고 있습니다
 
+- reference는 각 파일 아래에 명시했습니다
 
 
-## 목차
-1. 소프트웨어 베이직(C언어, 자료구조)
+## Contents
+1. [Data Structure](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/DataStructure)
 
-2. 운영체제
-3. 시스템 프로그래밍
-4. 컴퓨터 구조
+2. OS
+3. System Programming
+4. Computer Structure
 
