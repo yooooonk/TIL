@@ -41,6 +41,12 @@ new Vue({
  </span>
 </div>
 ```
+## Directive
+- v- 접두사가 있는 특수 속성
+- 디렉티브 속성은 단인 javaScript 표현식이 됨
+- 디렉티브의 역할은 표현식의 값이 변경될 때 사이드이펙트를 반응적으로 DOM에 적용하는 것
+- :으로 표시되는 전달인사를 사용할 수 있다
+
 ---
 - [배동훈 - vue.js입문 초보 실전 웹앱 개발-1부](https://www.inflearn.com/course/real-%EC%9B%B9%EC%95%B1-%EA%B0%9C%EB%B0%9C-vuejs-1%EB%B6%80)
 - [velopert](https://velopert.com/3095)

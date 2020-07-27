@@ -12,5 +12,5 @@
 
 2. OS
 3. System Programming
-4. Computer Structure
+4. Computer System
 

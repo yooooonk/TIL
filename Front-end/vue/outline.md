@@ -46,8 +46,6 @@
 - -.vue 확장자를 가진 모든 파일
 - _뷰 로더_ 에 의해 HTML, CSS, JS와 같은 웹 자원으로 분리되어 실행됨
 - 뷰 로더는 웹팩의 로더 종류 중 하나이고, 뷰 CLI로 프로젝트를 생성하면 기본적으로 설정됨
-
-
 ---
 - [배동훈 - vue.js입문 초보 실전 웹앱 개발-1부](https://www.inflearn.com/course/real-%EC%9B%B9%EC%95%B1-%EA%B0%9C%EB%B0%9C-vuejs-1%EB%B6%80)
 - [캡틴판교 - Vue.js 입문서](https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/)
