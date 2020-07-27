@@ -17,3 +17,7 @@
 ###  Computer Science :whale:
 * C언어
 * 자료구조
+* 컴퓨터 시스템 
+
+### Front-end
+- Vue.js

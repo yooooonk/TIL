@@ -12,5 +12,5 @@
 
 2. OS
 3. System Programming
-4. Computer System
+4. [Computer System](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/ComputerSystem)
 
