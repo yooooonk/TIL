@@ -64,3 +64,7 @@ var vm = new Vue({
     }
 })
 ```
+
+----
+- [배동훈 - vue.js입문 초보 실전 웹앱 개발-1부](https://www.inflearn.com/course/real-%EC%9B%B9%EC%95%B1-%EA%B0%9C%EB%B0%9C-vuejs-1%EB%B6%80)
+- 처음시작하는 Vue.js
