@@ -4,3 +4,4 @@
 - [컴퓨터 구조 Computer Structure](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/computer%20Structure.md)
 - [데이터의 종류](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/data.md)
 - [논리 회로 / 조합회로 / 기억회로 / 순차회로](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/data2.md)
+- [중앙처리장치](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/CPU.md)
