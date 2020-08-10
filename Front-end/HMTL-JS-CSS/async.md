@@ -133,3 +133,69 @@ new Promise(function(resolve, reject){
   console.log(result); // 31
 });
 ```
+
+## Async & Await
+- 비동기 처리 패턴 중 가장 최근에 나온 문법
+- 콜백 함수와 프로미스의 단점을 보완하고 읽기 좋은 코드를 작성할 수 있다 
+- 기본 문법
+    - 함수 앞에 async를 붙임
+    - http 통신을 하는 비동기 처리 코드 앞에 await를 붙임
+    - _비동기 처리 메서드가 꼭 프로미스 객체를 반환해야함!_
+- 여러 개의 비동기 처리 코드를 다룰 때 효율적이다
+- 예외처리는 try-catch
+``` javascript
+async function 함수명(){
+    await 비동기_처리_메서드명();
+}
+```
+
+``` javascript
+
+function logName(){
+    var user = fetchUser('domain.com/users/1');
+    if(user.id === 1){
+        console.log(user.name);
+    }
+}
+// 콜백
+function logName2(){
+    var user = fetchUser('domain.com/users/1',function(user){
+        if(user.id===1){
+            console.log(user.name);
+        }
+    })
+}
+
+// async & await 적용
+async function logName3(){
+    var user = await fetchUser('domain.com/users/1');
+    if(user.id === 1){
+        console.log(user.name);
+    }
+}
+
+// 여러개의 비동기 처리
+// user 정보를 가져온 후, user의 id가 1이면 할일을 가져와 console에 출력
+ async function fetchUser(){
+     try{
+        
+        var url = 'https://jsonplaceholer.typicode.com/users/1'
+        var user = await getUser(url);
+
+        if(user.id === 1){
+              var todo = await getTodo(url);
+              console.log(todo)       
+
+        }
+     }catch(error){
+         console.log(error);
+     }
+     
+}
+```
+
+---
+__reference__
+- [캡틴판교 - 자바스크립트 비동기 처리와 콜백함수](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
+- [캡틴판교 - 자바스크립트 promise 쉽게 이해하기](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
+- [캡틴판교 - 자바스크립트 async와 await](https://joshua1988.github.io/web-development/javascript/js-async-await/)
