@@ -13,8 +13,10 @@
 >Segment2 : R3 <- R1*R2, R4 <- C  
 >Segment3 : R5 <- R3+R4
 
+![출처 - 패스트캠퍼스 컴퓨터공학](https://github.com/yooooonk/TIL/blob/master/img/pipeline.PNG)
 
 ---
 __reference__
 - [위키백과 - 명령어 파이프라인](https://ko.wikipedia.org/wiki/%EB%AA%85%EB%A0%B9%EC%96%B4_%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8)
 - [Jake.lee's Blog - 파이프라이닝이란?](https://frontalnh.github.io/2018/04/07/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B4%EB%8B%9D-%EC%9D%B4%EB%9E%80/)
+ - fastcampus 컴퓨터 공학 전공 필수 [컴퓨터구조 - 이승조]    
