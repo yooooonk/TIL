@@ -7,3 +7,4 @@
 - [논리 회로 / 조합회로 / 기억회로 / 순차회로](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/data2.md)
 - [중앙처리장치](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/CPU.md)
 - [파이프라인과 벡터](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/pipeline%26Vector.md)
+- [메모리 관리](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/ComputerSystem/memory.md)

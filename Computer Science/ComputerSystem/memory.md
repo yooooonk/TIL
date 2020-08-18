@@ -43,13 +43,11 @@
     - miss인 경우 cpu는 주기억장치에서 해당 자료를 찾아 cache로 옮김
     - cache가 꽉 차있을 경우 기존 cache의 주소와 데이터쌍 중 주어진 알고리즘에 의해 해당 주소 데이터쌍이 새로운 쌍으로 대체 됨
     - 모든 태그들을 병렬로 검사하기 때문에 복잡하고 비용이 높음
-    - Set-Associative Mapping : 직접매핑과 연관 매핑의 장점만
+- __Set-Associative Mapping__ : 직접매핑과 연관 매핑의 장점만
     
-
-## 효율적인 메모리 관리 정책
 
 ---
 __reference__
  - fastcampus 컴퓨터 공학 전공 필수 [컴퓨터구조 - 이승조]    
- -[ljs0326블로그 - 기억장치](http://blog.naver.com/PostView.nhn?blogId=ljh0326s&logNo=220851633811)
+ - [ljs0326블로그 - 기억장치](http://blog.naver.com/PostView.nhn?blogId=ljh0326s&logNo=220851633811)
  - [코딩팩토리 - 캐시메모리란 무엇인가?](https://coding-factory.tistory.com/357?category=828008)
