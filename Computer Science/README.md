@@ -7,7 +7,7 @@
 - reference는 각 파일 아래에 명시했습니다
 
 
-## Contents
+## Category
 1. [Data Structure](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/DataStructure)
 
 2. OS
