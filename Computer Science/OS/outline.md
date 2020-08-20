@@ -58,7 +58,7 @@
 
 int main(){
     int fd;
-    fd : open("data.txt",O_RDONLY); // open() 시스템 콜 호출 -> 커널모드로 전환 
+    fd = open("data.txt",O_RDONLY); // open() 시스템 콜 호출 -> 커널모드로 전환 
     //-> open() 함수를 처리하는 sys_open() 커널 함수 호출 -> 파일 열기의 law level 연산 수행 
     //-> 사용자모드로 전환 -> open() 함수 이후의 프로그램을 이어서 실행
 
