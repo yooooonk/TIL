@@ -34,7 +34,46 @@
     - 오픈소스활성화 : Linux, Apache, mySQL, ...
     - 가상 머신, 대용량 병렬 처리등 활성화        
     
+## 구조
+![osstructure](https://github.com/yooooonk/TIL/blob/master/img/userinterface.PNG)
 
+### 사용자 인터페이스
+- shell : 사용자가 운영체제 기능과 서비스를 조작할 수 있도록 인터페이스를 제공하는 프로그램
+- CLI, GUI
+### 응용프로그램 인터페이스    
+- 시스템콜 : 운영체제의 각 기능을 응용 프로그램이 사용할 수 있도록 제공하는 명령어
+- API는 내부에서 시스템콜을 호출하는 형태로 만들어짐
+
+## CPU Protection Rings
+- CPU에는 권한 모드가 있음
+- 응용프로그램이 전체 컴퓨터 시스템에 영향을 주지 못하도록 보호하기 위함
+    - 사용자모드 : 응용프로그램이 사용
+    - 커널 모드 : 특권 명령어 실행과 원하는 작업 수행을 위한 자원 접근을 가능하게 하는 모드, OS가 사용, 커널모드로 실행하려면 반드시 시스템콜을 사용해야 함
+    ![protectionrings](https://github.com/yooooonk/TIL/blob/master/img/protectionring2.png)
+``` C
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+int main(){
+    int fd;
+    fd : open("data.txt",O_RDONLY); // open() 시스템 콜 호출 -> 커널모드로 전환 
+    //-> open() 함수를 처리하는 sys_open() 커널 함수 호출 -> 파일 열기의 law level 연산 수행 
+    //-> 사용자모드로 전환 -> open() 함수 이후의 프로그램을 이어서 실행
+
+    if(fd == -1){
+        printf("Error : can not open file\n");
+        return 1;
+    }else{
+        printf(*File opned and now close_\n*);
+        close(fd);
+        return();
+    }
+    
+}
+
+```    
 ---
 __reference__
 - [패스트캠퍼스 컴퓨터공학 운영체제 - 이준희]
