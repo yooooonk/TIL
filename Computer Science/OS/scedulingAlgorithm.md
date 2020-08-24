@@ -37,6 +37,9 @@
     - Running State Queue
     - Block State Queue
 
+## 선점형과 비선점형 스케줄러
+- 선점형(Preemptve Scheduling) : 하나의 프로세스가 다른 프로세스 대신에 프로세서를 차지할 수 있음 ex] Round Robin
+- 비선점형(Non-preemptive Sheduling) : 하나의 프로세스가 끝나지 않으면 다른 프로세스는 CPU를 사용하지 않는다. 프로세스가 자발적으로 blocking 상태로 들어가거나 실행이 끝났을 때만 다른 프로세스로 교체가능. ex] FIFO, SJF, Priority-based.
 
 
 ---
