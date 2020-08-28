@@ -10,7 +10,7 @@
 3. 컴퓨터 하드웨어와 응용 프로그램을 제어
     - ex] 응용 프로그램 실행, 권한관리, 사용자관리, ..    
 ![os](https://github.com/yooooonk/TIL/blob/master/img/os.PNG)
-
+![os2](https://github.com/yooooonk/TIL/blob/master/img/osTotal.PNG)
 ## 발전과정
 - 1950년대 
     - ENIAC : 최초의 컴퓨터, 운영체제 없이 응용프로그램이 직접 자원관리
