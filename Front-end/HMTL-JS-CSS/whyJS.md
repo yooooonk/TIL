@@ -40,6 +40,13 @@ info.age = 30;
 console.log(info.age);//30
 ```
 
+### DOM
+- Document Object Module
+- 자바스크립트는 html 태그를 가져와서 object로 바꿈
+
+### Local storage
+- 자바스크립트 정보를 저장
+
 ---
 __reference__
 - [바닐라 JS로 크롬 앱 만들기-nomad coder](https://nomadcoders.co/javascript-for-beginners/lobby)
