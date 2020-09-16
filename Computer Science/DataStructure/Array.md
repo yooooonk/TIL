@@ -42,3 +42,77 @@ class Max{
     }
 }
 ```
+
+### 배열 요소를 역순으로 정렬하기
+= 교환
+``` java
+class Reverse{
+
+    static void swap(int[] a, int idx1, int idx2){
+        int t = a[idx1];
+        a[idx1] = a[idx2];
+        a[idx2] = t;
+
+    }
+  
+     static void reverse(int[] a){
+         for(int i =0;i<a.length;i++){
+             swap(a,i,a.length-i-1);
+         }
+     }
+
+    public static void main(final String[] args) {
+        
+        //Scanner stdIn = new Scanner(System.in);
+
+        System.out.println("요솟수 : ");
+        int num = stdIn.nextInt();
+
+        int[] x = new int[num];
+
+        for(int i = 0;i<num;i++){
+            
+            System.out.println("x["+i+"]:");
+            x[i] = stdIn.nextInt();
+        }
+
+        reverse(x);
+
+        System.out.println("요소를 역순으로 정렬했습니다");
+        for(int i =0;i<num;i++){
+            System.out.println("x["+i+"]="+x[i]);
+        }
+
+    }
+}
+```
+
+### 두 배열의 비교
+``` java
+class ArrayEqual{
+
+    static boolean equals(int[] a, int[] b){
+        if(a.length != b.length) return false;
+
+        for(int i = 0; i<a.length ; i++){
+            if(a[i] != b[i]) return false;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {1,2,3,4,5};
+        
+        System.out.println("a[]의 요수 : "+ a.length);
+
+        int[] b = {1,2,3,4,5};
+
+        System.out.println("b[]의 요수 : "+ b.length);
+
+        System.out.print("배열 a와 b는");
+        System.out.println(equals(a, b)?"같다":"같지않다");
+
+    }    
+}
+```
