@@ -116,3 +116,104 @@ class ArrayEqual{
     }    
 }
 ```
+
+### 기수 변환
+``` java
+class Hello{
+
+    static int cardConvR(int a, int r, char[] d){
+        int digits = 0;
+        String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        do{
+            d[digits++] = dchar.charAt(x%r); // 나머지를 저장
+            x /= r;
+        }while(x != 0);
+        return digits;
+    }
+    
+}
+```
+
+### 소수의 나열
+``` java
+class Hello{
+
+    static void primeNumber1(){
+        int counter = 0;
+
+        for(int n = 2;n<=1000;n++){
+            int i;
+            for(i = 2;i<n;i++){
+                counter++;
+                if(n%i==0) break;                
+            }
+            if(n==i){
+                System.out.println(n);
+            }
+            
+        }
+        System.out.println("나눗셈을 수행한 횟수:"+counter);
+    }
+
+    static void primeNumber2(){
+        int counter = 0;
+        int ptr = 0;
+        int[] prime = new int[500];
+
+        prime[ptr++] = 2;
+
+        for(int n = 3 ; n <= 1000; n+=2){ // 홀수만, 짝수는 다 2로 나눠짐
+            int i;
+            for(i=1;i<ptr;i++){
+                counter ++;
+                if(n%prime[i] == 0) break;
+            }
+            
+            if(ptr == i) prime[ptr++] = n;
+        }
+
+        for(int i = 0 ; i <ptr ; i++){
+            System.out.print(prime[i]+" ");;
+        }
+        System.out.println("나눗셈을 수행한 횟수:"+counter);
+    }
+
+    static void primeNumber3(){
+        int counter = 0;
+        int ptr = 0;
+        int[] prime = new int[500];
+
+        prime[ptr++] = 2;
+        prime[ptr++] = 3;
+
+        for(int n = 5; n<=1000;n+=2){
+            boolean flag = false;
+            for(int i = 1 ; prime[i]*prime[i]<=n ; i++){
+                counter += 2;
+
+                if(n%prime[i] == 0){
+                    flag = true;
+                    break;
+                }
+            }
+
+            if(!flag){
+                prime[ptr++] = n;
+                counter++;
+            }
+        }
+        for(int i = 0; i<ptr; i++){
+            System.out.println(prime[i]);
+        }
+        System.out.println("곱셈과 나눗셈을 수행한 횟수: "+counter);
+
+    }
+
+    public static void main(String[] args) {
+        
+        //primeNumber1();
+        primeNumber3();
+    }
+}
+```
