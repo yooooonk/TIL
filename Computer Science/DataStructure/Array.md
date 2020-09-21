@@ -275,3 +275,7 @@ class Hello{
 - final 클래스 : 새로운 클래스를 상속할 수 없다
 - 파생 클래스 : B extends A라면 B가 A의 서브 클래스
 
+
+---
+reference
+- 자료구조와 함께 배우는 알고리즘 입문 JAVA편

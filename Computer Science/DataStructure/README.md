@@ -18,6 +18,7 @@
 ## Data Structure 자료구조
 - [Big-O 표기법](https://yooooon51.tistory.com/22)
 - [개요 Outline](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-%20outline.md)
+- [선형검색 linear Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20search.md)
 - [리스트 List](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-linkedList.md)
 - [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20stack.md)
 - [스택을 활용한 계산기 만들기](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20stackCalculator.md)
@@ -27,7 +28,6 @@
 - [계수정렬 Counting Sort / 기수정렬 Radix Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20sort3.md)
 - [이진트리 Binary Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20binaryTree.md)
 - [우선순위 큐 Priority Queue](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20priorityQueue.md)
-- [순차탐색 Sequential Search / 이진탐색 Binary Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20search.md)
 - [그래프 Graph](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS-graph.md)
 - [깊이우선탐색 Depth First Tree / 너비우선탐색 Breadth First Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20search2.md
 )
