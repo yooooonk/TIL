@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 class Hello{
    static int linearSearch(int[] x, int num, int key){
+      // while
       /* while(true){
             if(i == num){
                 return -1;
@@ -19,12 +20,20 @@ class Hello{
             }
             i++;
         } */
-        for(int  i = 0 ; i<num; i++){
+
+        // for
+       /*  for(int  i = 0 ; i<num; i++){
             if(x[i] == key){
                 return i;
             }
-        }
-        return -1;
+        } */        
+
+        // 보초법        
+        int i ;
+        x[num] = key;
+        for(i = 0 ; x[i]!= key ; i++);
+
+        return i == num? -1 : i;
    }   
 
     public static void main(String[] args) {
@@ -33,7 +42,8 @@ class Hello{
         System.out.print("요솟수 :");
         int num = stdIn.nextInt();
 
-        int[] x = new int[num];
+        //int[] x = new int[num];
+        int[] x = new int[num+1]; // 보초법
 
         for(int i = 0;i<num; i++){
             System.out.print("x["+i+"] :");

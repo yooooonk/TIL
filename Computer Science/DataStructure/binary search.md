@@ -33,10 +33,14 @@ class Hello{
                 
         System.out.print("요솟수 :");
         int n = stdIn.nextInt();
-        int[] a = new int[n];
         System.out.println("오름차순으로 입력하세요");
+
         
-        for(int i = 0 ; i<n ; i++){
+        System.out.print("x[0]:");
+        int[] a = new int[n];
+        a[0] = stdIn.nextInt(); //while 조건문 때문
+
+        for(int i = 1 ; i<n ; i++){
             do{
                 System.out.print("a["+i+"]: ");
                 a[i] = stdIn.nextInt();
