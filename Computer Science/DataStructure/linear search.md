@@ -112,6 +112,76 @@ class Hello{
 }
 ```
 
+ex] 연습문제 - 슼닝 과정을 상세하게 출력하는 프로그램을 작성하세요
+``` java
+import java.util.Scanner;
+
+import sun.jvm.hotspot.oops.java_lang_Class;
+
+class Hello{
+   static void linearSearch(int[] arr, int key){
+    //1 2 3 4    5
+    int n = arr.length + 1;
+
+    int[] x = new int[n]; 
+
+    for(int i = 0 ; i < n-2 ; i++){
+        x[i] = arr[i];
+    }
+    x[n-1] = key;
+
+    // 첫줄 출력
+    System.out.print("   |");
+    for(int i = 0 ; i < n ; i++){        
+        System.out.printf("%4d",i);        
+    }
+    System.out.println();
+    
+    System.out.print("---+");
+    for(int i = 0 ; i < n+2; i++){
+        System.out.print("----");
+    }
+    System.out.println();
+    
+    // 배열출력
+    for(int i = 0 ; i<n ; i++){
+        System.out.print("   |");        
+        System.out.printf(String.format("%%%ds*\n", (i*4)+3),"");
+        System.out.printf("%3d",i);
+        System.out.print("|");
+
+        for(int j = 0 ; j<n; j++){
+            System.out.printf("%4d",x[j]);
+        }
+        System.out.println();
+        
+        // 진짜 검색
+        
+        if(x[i] == key){
+            if(i == n-1){
+                System.out.println("찾는 값이 없어요");
+            }else{
+                System.out.println("찾는 값은 x["+i+"]에... 이상 검색을 종료합니다");
+            break;
+            }
+            
+        }
+        
+     
+    }
+
+   }   
+
+    public static void main(String[] args) {
+        
+        int[] arr = {5,7,8,10};        
+        int key = 11;
+        linearSearch(arr, key);
+    }
+}
+```
+=> String.format에 대해 익힘, 이건 보초법을 쓸 필요가 없다..
+
 ---
 __REFERENCE__
 - 자료구조와 함께 배우는 알고리즘 입문 JAVA편
