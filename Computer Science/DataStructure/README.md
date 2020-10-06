@@ -15,14 +15,21 @@
 - [파일입출력 File I/O](https://yooooon51.tistory.com/20?category=786789)
 - [전처리기 Preprocessor](https://yooooon51.tistory.com/21?category=786789)
 
-## Data Structure 자료구조
+## Data Structure 자료구조 
+&#127854; __JAVA__
 - [Big-O 표기법](https://yooooon51.tistory.com/22)
-- [개요 Outline](https://github.com/yooooonk/TIL/blob/master/Computer%20Engineering/Software%20Basic/DS%20-%20outline.md)
-- [선형검색 linear Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20search.md)
+- [개요 Outline](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/outline.md)
+- [배열 Array](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/Array.md)
+- [선형검색 linear Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/linear%20search.md)
+- [이진 탐색 Binary Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/binary%20search.md)
+- [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/stack.md)
+- [큐 Queue](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/queue.md)
+---
+&#127875; __C__
 - [리스트 List](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-linkedList.md)
-- [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20stack.md)
+- [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/stack.md)
 - [스택을 활용한 계산기 만들기](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20stackCalculator.md)
-- [큐 Queue](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20queue.md)
+
 - [선택정렬 Selection Sort / 삽입정렬 Insertion Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS-%20%20sort1.md)
 - [퀵 정렬 Quick Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS-%20%20sort2.md)
 - [계수정렬 Counting Sort / 기수정렬 Radix Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20sort3.md)
