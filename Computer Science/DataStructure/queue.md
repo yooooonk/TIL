@@ -108,82 +108,118 @@ class Queue{
 }\
 
 ```
+### 링 버퍼로 큐 구현
+- 배열 요소를 앞쪽으로 옮기지 않는 큐
+- 배열의 처음과 끝이 연결되어있다고 보는 자료구조
+- 논리적으로 어떤 요소가 첫 번째 요소이고 어떤 요소가 마지막 요소인지 식별하기 위한 변수가 front와 rear
+	- front : 맨 처음 요소의 인덱스
+	- rear : 맨 끝 요소의 하나 뒤의 인덱스(다음 요소를 인큐할 위치를 미리 지정)
 
  ### 연결 리스트를 이용한 큐 구현
- ``` c
- #define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+ ``` java
+class IntQueue{
+    private int max;
+    private int front; // 첫
+    private int rear; // 끝
+    private int num; // 현재 데이터 수
+    private int[] que;
 
-#define SIZE 10000
-#define INF 9999999
+    public class EmptyQueueException extends RuntimeException{
+        public EmptyQueueException(){}
+    }
 
-typedef struct {
-	int data;
-	struct Node* next;
-} Node;
+    public class OverFlowQueueException extends RuntimeException{
+        public OverFlowQueueException(){}
+    }
 
-typedef struct {
-	Node* front;
-	Node* rear;
-	int count;
-}Queue;
+    public IntQueue(int capacity){
+        num = front = rear = 0;
+        max = capacity;
+        try {
+            que = new int[max];
+        } catch (OutOfMemoryError e) {
+            max = 0;
+        }
+    }
 
-void push(Queue* q, int data) { // 새 노드가 rear
-	Node* node = (Node*)malloc(sizeof(Node));
-	node->data = data;
-	node->next = NULL;
-	if (q->count == 0) {
-		q->front = node;
-	}
-	else {
-		q->rear->next = node;
-	}
+    public int enque(int x) throws OverFlowQueueException{
+        if(num >= max){
+            throw new OverFlowQueueException();
+        }
 
-	q->rear = node;
-	q->count++;
+        que[rear++] = x;
+        num++;
+
+        if(rear == max){
+            rear = 0;
+        }
+        return x;
+    }
+
+    public int deque() throws EmptyQueueException{
+        if(num <= 0){
+            throw new EmptyQueueException();
+        }
+
+        int x = que[front++];
+        num --;
+
+        if(front == max){
+            front = 0;
+        }
+        return x;
+    }
+
+    public int peek() throws EmptyQueueException{
+        if(num <= 0){
+            throw new EmptyQueueException();
+        }
+
+        return que[front];
+    }
+
+    public int indexOf(int x){
+        for(int i = front ; i< rear ; i++){
+            //int idx = (i+front) % max;
+            if(que[i]==x){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void clear(){
+        num = front = rear = 0;
+    }
+
+    public int capacity(){
+        return max;
+    }
+
+    public int size(){
+        return num;
+    }
+
+    public boolean isEmpty(){
+        return num <= 0;
+    }
+
+    public boolean isFull(){
+        return num >= max;
+    }
+
+    public void dumb(){
+        if(num<=0){
+            System.out.println("큐가 비어 있습니다");
+        }else{
+            for(int i = 0; i <num; i++){
+                System.out.println(que[(i+front)%max]+" ");
+            }
+            System.out.println();
+        }        
+    }
 }
 
-void pop(Queue* q) { // front를 삭제, 그 다음 노드가 front
-	if (q->count ==0) { 
-		printf("큐 언더플로우가 발생했습니다 \n");
-		return -INF;
-	}
-	
-	Node* node = q->front;
-	int data = node->data;
-	q->front = node->next;
-	free(node);
-	q->count--;
-	return data;
-}
-
-void show(Queue* q) {
-	Node* cur = q->front;
-	printf("--큐의 앞--\n");
-	while (cur != NULL){
-		printf("%d\n", cur->data);
-		cur = cur->next;
-	}
-	printf("--큐의 뒤--");
-}
-
-int main(void) {
-	
-	Queue q;
-	q.front = q.rear = NULL;
-	q.count = 0;
-
-	push(&q, 7);
-	push(&q, 5);
-	push(&q, 4);
-	pop(&q);
-	push(&q, 6);
-	pop(&q);
-	show(&q);
-	
-	system("pause");
-	return 0;
-}
  ```
  ---
 __REFERENCE__
