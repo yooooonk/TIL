@@ -7,8 +7,9 @@
 
 
 ## Category
-1. [Data Structure](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/DataStructure)
-2. [OS](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/OS)
-3. System Programming
-4. [Computer System](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/ComputerSystem)
+- [Algorithm](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/Algorithm)
+- [Data Structure](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/DataStructure)
+- [OS](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/OS)
+
+- [Computer System](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/ComputerSystem)
 
