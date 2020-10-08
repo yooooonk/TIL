@@ -88,3 +88,54 @@ const x = 'abcdefg';
 ```
 
 ### 각 자릿수의 합
+``` javascript
+function rec(x){
+    if(x.length == 1){
+        return parseInt(x,10);
+    } 
+            
+    return parseInt(x[x.length-1],10) + rec(x.slice(0,x.length-1))
+}
+
+console.log('재귀',rec('123123'))
+```
+
+### 팩토리얼
+```javascript
+function f(n){
+              if(n<=0){
+                  return 1
+              }else{
+                  return n*f(n-1);
+              } 
+          }
+
+          console.log(f(3))
+```
+
+### 유클리드 호제법
+- 두 정수의 최대공약수를 재귀적으로 구하는 방법
+- 두 정수가 주어졌을 때 큰 값을 작은 값으로 나누었을 때 나누어떨어지는 가장 작은 값이 최대공약수
+```javascript
+function f(x,y){
+              if(y==0){
+                  return x;
+              }else{
+                  return f(y, x%y)
+              }
+          }
+
+          console.log(f(20,12))
+```
+
+### 피보나치 수열
+``` javascript
+function fibonacci(n){
+    if(n == 1 || n == 2){
+        return 1;
+    }
+
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+//f(f(f(f(2)+f(1))+f(2))+f(f(2)+f(1))) 
+```
