@@ -185,5 +185,5 @@ int main(void) {
 ---
 __REFERENCE__
 - fastcampus 컴퓨터 공학 전공 필수 [소프트웨어 베이직 - 나동빈]
-- [자료구조와 함께 배우는 알고리즘 입문 JAVA편]
+- &#128214;[자료구조와 함께 배우는 알고리즘 입문 JAVA편]
 - stack img https://www.programiz.com/dsa/stack
