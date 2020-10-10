@@ -17,6 +17,8 @@
 - @NoArgsConstructor : 기본 생성자 자동추가
 - @Builder : 해당 클래스의 빌더 패턴 클래스를 생성, 생성자 상단에 선언 시 생성자에 포함된 빌드만 빌더에 제공
 
+### Spring Security
+- @EnableWebSecurity : Spring Security 설정들을 활성화
 
 ---
 __reference__
