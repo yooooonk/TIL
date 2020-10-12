@@ -4,6 +4,51 @@
  
 
 ### 선택정렬 구현
+javascript
+```javascript
+let a = [10,3,4,66,23,12,11];
+let sort = [];
+
+ while(a.length!=0){
+    sort.push(Math.min.apply(null, a));
+    
+    a.splice(a.indexOf(Math.min.apply(null, a)),1); 
+} 
+```
+java
+```java
+class selectionSort{
+    
+    static void swap(int[] a, int idx1, int idx2){
+        int temp = a[idx1];
+        a[idx1] = a[idx2];
+        a[idx2] = temp;
+    }   
+    
+   static void selectionSort(int[] a, int n){
+        
+        for(int i = 0; i<n-1; i++){
+            int min = i;
+            for(int j = i+1; j<n ; j++){
+                if(a[j] < min){
+                    min = j;
+                }                
+            }
+            swap(a, i, min);
+        }
+   }
+
+    public static void main(String[] args) {
+        int a[] = {6,4,3,7,1,9,8};
+
+        selectionSort(a, a.length);                
+    }
+}
+
+
+```
+
+C
 ```c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
