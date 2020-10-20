@@ -24,6 +24,9 @@
 - [이진 탐색 Binary Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/binary%20search.md)
 - [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/stack.md)
 - [큐 Queue](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/queue.md)
+
+## Algorithm
+- [탐욕법]()
 ---
 &#127875; __C__
 - [리스트 List](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-linkedList.md)
