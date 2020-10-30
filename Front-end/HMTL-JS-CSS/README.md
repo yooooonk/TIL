@@ -5,4 +5,4 @@
 - [자바스크립트의 비동기처리](https://github.com/yooooonk/TIL/blob/master/Front-end/HMTL-JS-CSS/async.md)
 - [css](https://github.com/yooooonk/TIL/blob/master/Front-end/HMTL-JS-CSS/css.md)
 - [JS](https://github.com/yooooonk/TIL/blob/master/Front-end/HMTL-JS-CSS/whyJS.md)
-- [자바스크립트 핵심개념]
+- [자바스크립트 핵심개념](https://github.com/yooooonk/TIL/blob/master/Front-end/HMTL-JS-CSS/javascript%20notion.md)
