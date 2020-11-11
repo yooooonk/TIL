@@ -4,11 +4,16 @@
 - View <-> ViewModel <-> Model
 - Backend 로직과 Client의 마크업 & 데이터 표현단을 분리하기 위한 구조로 전통적인 MVC 패턴의 방식에서 기인
 - 화면 앞단의 화면 동작 관련 고직과 뒷단의 DB 데이터 처리 및 서버 로직을 분리하고, 뒷단에서 넘어온 데이터를 Model에 담아 View로 넘겨주는 중간 지점  
+- Model에서 데이터를 가져오면 View에 적합한 모델로 가공됨
 ### MVC 패턴과의 차이?
 - MVC 패턴 
-    - Model : 프로그램에서 사용하는 실제 데이터 및 데이터 조작 로직을 처리하는 부분
+    - Model <-> Controller <-> View
+    - Model : 프로그램에서 사용하는 실제 데이터 및 데이터 조작 로직을 처리하는 부분,
+              DB에 있는 데이터를 가져와서 다른 객체에 전달, 
+              외부 객체로부터 입력데이터를 받아서 DB에 입력
+- 웹 프론트에서 모델은 DB에 직접 접근하지 않고 API를 통해 데이터를 받고, 백앤드 API를 통해 데이터를 호출
     - View : 사용자에게 제공되어 뵤여지는 UI 부분
-    - Controller : 사용자의 입력을 받고 처리하는 부분
+    - Controller : 사용자의 입력을 받고 처리하는 부분, model과 view를 연결하는 역할(model과 view는 직접적으로 연결되어 있지 않음),model에서 데이터를 가져와 view에 전달하고, view에서 입력된 데이터를 받아와 model에 전달
     - 뷰와 모델이 의존적이라는 단점
 - MVP 패턴
     - Model + View + Presenter
@@ -51,3 +56,4 @@
 - [캡틴판교 - Vue.js 입문서](https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/)
 - [마기의 개발 블로그 - MVC,MVP,MVVM 비교](https://magi82.github.io/android-mvc-mvp-mvvm/)
 - [cracking vue.js](https://joshua1988.github.io/vue-camp/vue/sfc.html#%EC%8B%B1%EA%B8%80-%ED%8C%8C%EC%9D%BC-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC)
+- [인프런 -실습 UI 개발로 배워보는 순수 javascript 와 VueJS 개발]
