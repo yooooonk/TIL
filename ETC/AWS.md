@@ -55,3 +55,8 @@ sudo vim /etc/sysconfig/network
 ## EC2 소셜 로그인 설정
 - 소셜 로그인 서비스에 EC2 퍼블릭 DNS 추가
 
+
+
+---
+__reference__
+- &#128214; 스프링부트와 AWS로 혼자 구현하는 웹서비스
