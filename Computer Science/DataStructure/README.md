@@ -2,7 +2,6 @@
 &#128516; reference는 각 파일 아래에 명시했습니다
 
 ## C언어
-
 - [연산자 operator](https://yooooon51.tistory.com/11?category=786789)
 - [조건문 Conditional Statements](https://yooooon51.tistory.com/12?category=786789)
 - [포인터 Pointer](https://yooooon51.tistory.com/13?category=786789)

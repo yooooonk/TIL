@@ -1,14 +1,6 @@
 # Today I Learned :seedling:
 
-## 작성규칙
-
-* 공부한 내용을 업로드합니다
-
-* 3일 커밋 쉬지않기
-
-* 일주일에 3일이상 쉬지않기
-
-* [namjunemy](https://github.com/namjunemy)님과 [milooy](https://github.com/milooy)님의 Github TIL를 참고하였습니다
+- 기초가 튼튼한 개발자되기
 ---
 ## 매일 공부 일지 &#128209;
 ### [2020년]()&#128045;
@@ -16,10 +8,22 @@
 
 ---
 ###  Computer Science :whale:
-* C언어
-* 자료구조
-* 컴퓨터 시스템 
+
+- [컴퓨터 시스템](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/ComputerSystem)
+- [OS](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/OS)
+- [자료구조/알고리즘](https://github.com/yooooonk/TIL/tree/master/Computer%20Science/DataStructure)
+
 
 ### Front-end
-- Vue.js
-- HTML-JS-CSS
+- [Vue.js](https://github.com/yooooonk/TIL/tree/master/Front-end/vue)
+- [HTML-JS-CSS](https://github.com/yooooonk/TIL/tree/master/Front-end/HMTL-JS-CSS)
+
+### Back-end
+- [Spring Boot](https://github.com/yooooonk/TIL/tree/master/Back-end/Spring%20Boot)
+- [ETC](https://github.com/yooooonk/TIL/tree/master/Back-end/ETC)
+
+### Database
+- [JPA](https://github.com/yooooonk/TIL/tree/master/Database/JPA)
+
+### ETC
+- [ETC](https://github.com/yooooonk/TIL/tree/master/ETC)
