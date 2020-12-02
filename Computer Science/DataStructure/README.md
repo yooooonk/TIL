@@ -8,7 +8,6 @@
 - [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/stack.md)
 - [큐 Queue](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/queue.md)
 - [리스트 List](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-linkedList.md)
-- [스택 Stack](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/stack.md)
 - [Hash](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20Hash.md)
 - [최소 신장 트리 Minimum Spanning Tree](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20MST.md)
 - [이진 탐색 트리](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20BinarySearchTree.md)
@@ -21,20 +20,16 @@
 
 ## Algorithm
 - [Big-O 표기법](https://yooooon51.tistory.com/22)
-- [탐욕법]()
+- [탐욕법](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/AL_greedy.md)
 - [선형검색 linear Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/linear%20search.md)
 - [이진 탐색 Binary Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/DataStructure/binary%20search.md)
 - [스택을 활용한 계산기 만들기](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20stackCalculator.md)
-
 - [선택정렬 Selection Sort / 삽입정렬 Insertion Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS-%20%20sort1.md)
 - [퀵 정렬 Quick Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS-%20%20sort2.md)
 - [계수정렬 Counting Sort / 기수정렬 Radix Sort](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20sort3.md)
 - [그래프 Graph](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS-graph.md)
-- [깊이우선탐색 Depth First Tree / 너비우선탐색 Breadth First Search](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20search2.md
-)
-
 - [Dijkstara's Algorithm](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20Dijkstra's.md)
 - [KMP algorithm](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20KMP%20algorithm.md)
 - [Rabin-karp algorithm](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20rabin-karp.md)
-
-
+- [깊이 우선탐색 너비우선탐색](https://github.com/yooooonk/TIL/blob/master/Computer%20Science/Software%20Basic/DS%20-%20search2.md
+)
