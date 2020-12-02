@@ -6,4 +6,4 @@
 - [AWS 클라우드 컴퓨팅 설정](https://github.com/yooooonk/TIL/blob/master/ETC/AWS.md)
 - [웹서버](https://github.com/yooooonk/TIL/blob/master/ETC/webServer.md)
 - [AWS](https://github.com/yooooonk/TIL/blob/master/ETC/AWS.md)
-- [servlet]()
+- [servlet](https://github.com/yooooonk/TIL/blob/master/ETC/servlet.md)
