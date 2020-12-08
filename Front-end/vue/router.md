@@ -31,7 +31,7 @@ new Vue({
 
 ```
 
-## 뷰 라우터 이용
+## 뷰 라우터 사용
 1. 라우트 컴포넌트 정의
 2. 라우트 정의
 3. router 인스턴스 만들기
@@ -109,9 +109,32 @@ const router = new VueRouter({
   ]
 })
 ```
+## 네비게이션 가드
+- 주로 리다이렉션하거나 췻고하여 네비게이션을 보호하는 데 사용
+- router.beforeEach(to, from, next): 전역 가드
+- beforeEnter(to, from, next) : 라우트 별 가드
+  - to : 라우트, 대상 router 객체로 이동
+  - from : 라우트, 현재 라우트로 오기전 라우트
+  - next : 함수
+    - next() : 파이프라인의 다음 훅으로 이동
+    - next(false) : 현재 네비게이션을 중단, 브라우저 url이 변경되면 from 경로의 url로 재설정
+    - next('/') 또는 next({path:'/'}) : 다른 위치로 리다이렉션
+``` javascript
+const requireAuth = (to,from,next)=>{
+      const isAuth = localStorage.getItem('token')
+      const loginPath = `/login?rPath=${encodeURIComponent(to.path)}`
 
+      isAuth? next():next(loginPath)
+}
+
+const routes = [
+  { path: '/', component: Home, beforeEnter : requireAuth },  
+]
+
+
+```    
 
 ---
 __reference__
 - [트렐로 개발로 배우는 Vuejs, Vuex,Vue-Router 프론트엔드 실전 기술]
-- https://router.vuejs.org/kr/guide/#html
+- [vue router](https://router.vuejs.org/kr/guide/#html)
