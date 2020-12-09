@@ -1,14 +1,18 @@
-# 트리 탐색 방법
+![dfs_bfs](https://github.com/yooooonk/TIL/blob/master/img/bfs%20vs%20dfs2.PNG)
+![dfs_bfs2](https://github.com/yooooonk/TIL/blob/master/img/bfs%20vs%20dfs.PNG)
 
-## 깊이 우선 탐색 Depth First Search
+# 깊이 우선 탐색 Depth First Search
+
 - 깊은 것을 우선적으로 탐색하는 알고리즘
 - 전체 노드를 맹목적으로 탐색하고자 할 때 사용
-- Stack 자료구조를 기초로 한다
+- child node-> child node -> child node -> ... 맨끝 child node의 방문을 끝내면 형제노드로
+- **Stack** 으로 구현
 - 모든 경우의 수를 빠르게 탐색하고자 할 때 쉽게 사용할 수 있다
 - 탐색 시작 노트를 스택에 삽입하고 방문처리 ->  
-스택의 최상단 노드에게 방문하지 않은 인접 노드가 하나라도 있으면 그 노드를 스택에 넣고 방문 처리.   
-방문하지 않은 인접 노드가 없으면 스택에서 최상단 노드를 꺼낸다 -> 이걸 못할때까지 반복
+  스택의 최상단 노드에게 방문하지 않은 인접 노드가 하나라도 있으면 그 노드를 스택에 넣고 방문 처리.  
+  방문하지 않은 인접 노드가 없으면 스택에서 최상단 노드를 꺼낸다 -> 이걸 못할때까지 반복
 - O(N)의 시간복잡도
+
 ```c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -67,15 +71,17 @@ int main(void) {
 ```
 
 # 너비 우선 탐색 Breadth First Search
+
 - 너비를 우선으로 하여 탐색을 수행하는 탐색 알고리즘
 - DFS와 같이 맹목적으로 전체 노드를 탐색하고자 할 때 자주 사용
-- Queue 자료구조를 기로로 한다
-- 고급 그래프 탐색 알고리즘에서 자주 활용되므로 고급 개발자가 되기 위해서는 너비 우선 탐색에 대해 숙지해야한다 
+- **Queue** 자료구조를 기로로 한다
+- 고급 그래프 탐색 알고리즘에서 자주 활용되므로 고급 개발자가 되기 위해서는 너비 우선 탐색에 대해 숙지해야한다
 - 탐색 시작 노드를 큐에 넣고 방문 처리 ->  
-큐에서 노드를 꺼내 해당 노드의 인접 노드 중에서 방문하지 않은 노드들을 모두 큐에 삽입하고 방문처리->  
-반복
+  큐에서 노드를 꺼내 해당 노드의 인접 노드 중에서 방문하지 않은 노드들을 모두 큐에 삽입하고 방문처리->  
+  반복
 - O(N)의 시간복잡도, 일반적인 경우 실제 수행 시간은 DFS보다 좋은 편
-``` c
+
+```c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -180,7 +186,11 @@ int main(void) {
 	return 0;
 }
 ```
+
 ---
-__REFERENCE__
+
+**REFERENCE**
+
 - fastcampus 컴퓨터 공학 전공 필수 [소프트웨어 베이직 - 나동빈]
-- 제주코딩베이스캠프 
+- 제주코딩베이스캠프
+- [엔지니어 대한민국 - Gragh 탐색](https://www.youtube.com/watch?v=_hxFgg7TLZQ)
