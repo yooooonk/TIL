@@ -146,6 +146,14 @@ const requireAuth = (to, from, next) => {
 const routes = [{ path: "/", component: Home, beforeEnter: requireAuth }];
 ```
 
+## 응용
+
+### token 유무에 따라 페이지 자동이동
+
+```
+
+```
+
 ---
 
 **reference**
