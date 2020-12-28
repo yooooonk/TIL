@@ -29,7 +29,26 @@ npm init
   ```
   npm install jest supertest node-mocks-http --save-dev
   ```
+server.js
+```javascript
+// exporess module 불러오기
+const express = require('express')
 
+const PORT = 5000;
+
+//applicaiton 생성
+const app = express();
+app.use(express.json()) //req.body를 사용하기위해
+
+app.get('/',(req,res)=>{
+    res.send('Hello World')
+});
+
+// applicaiton 시작
+app.listen(PORT);
+console.log(`Running on port ${PORT}`)
+
+```
 
 ---
 
