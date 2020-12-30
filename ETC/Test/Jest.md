@@ -25,3 +25,13 @@ npm install jest --save-dev
 ## Jest 파일
 - dexscribe : 여러 관련 테스트를 그룹화하는 블록을 만듦
 - it : 개별 테스트를 수행하는 곳, 각 테스트를 작은 문장처럼 설명
+- expect : 값을 테스트할 때마다 사용됨, matcher와 함께 사용
+- matchar : 다른 방법으로 값을 테스트하도록 
+- beforeEach : 
+
+- method
+    - expect.toBe()
+    - expect.toBeCalledWith(xx)
+    - expect
+    - res._isEndCalled()
+    - mockReturnValue : 가짜 함수가 어떠한 결과값을 반환 할지 직접 알려줄 때 사용하는...
