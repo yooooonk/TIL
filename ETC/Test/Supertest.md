@@ -6,7 +6,7 @@
 const request = require('supertest');
 const express = require('express');
 
-const app = expresS()
+const app = express()
 
 // 클라이언트에서 들어오는 요청을 처리하는 원본소스
 app.get('/user',function(res,res){
