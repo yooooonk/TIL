@@ -42,9 +42,56 @@ useEffect(()=>{
 - useEffect는 렌더링이 실행될 때마다 실행된다. 
 - multiple effect로 관심사를 구분할 수 있다.
 - useEffect의 선택적 인수인 두 번째 인수로 배열을 넘기면, 그 인수가 리렌더링 시에 변경되지 않으면 effect를 건너뛰어 성능 최적화가 가능하다.
+## useMemo
+``` javascript
+const count = useMemo(() => countActiveUsers(users), [users]);
+```
+- 연산된 값을 재사용
+- 첫번째 파라미터에는 어떻게 연산할지 정의하는 함수
+- 두 파라미터에는 deps 배열. 배열 안에 넣은 내용이 바뀌면 등록한 함수를 호출해서 값을 연산하고, 만약에 내용이 바뀌지 않았다면 이전에 연산한 값을 재사용하게 된다
+
+## useCallback
+``` javascript
+  const onChange = useCallback(
+    e => {
+      const { name, value } = e.target;
+      setInputs({
+        ...inputs,
+        [name]: value
+      });
+    },
+    [inputs]
+  );
+```
+- 특정 함수를 새로 만들지 않고 재사용하고 싶을 때 사용하는 hook
+- 함수들도 컴포넌트가 리렌더링 될 때마다 새로 만들어진다. 함수를 선언하는 것 자체는 사실 리소스를 많이 차지하는 작업은 아니기 때문에 함수를 새로 선언한다고 해서 그 자체만으로 큰 부하가 생길일은 없지만, 한번 만든 함수를 필요할때만 새로 만들고 재사용하는 것은 중요하다. 
+- 함수 안에서 사용하는 state 혹은 props가 있다면 꼭 배열로 넘겨줘야한다. 그렇지 않으면, 해당 값들을 참조할 때 가장 최신 값을 참조하지 않을 수 있다
+
+## useRef
+- 특정 DOM을 직접 선택할 때 사용한다. useRef는 순수 자바스크립트 객체를 생성하며, useRef는 매번 렌더링할 때 동일한 ref 객체를 제공한다.
+- 컴포넌트 안에서 조회 및 수정 할 수 있는 변수를 관리할 때도 사용할 수 있음
+- 함수 컴포넌트 내부에 선언한 변수는 렌더링 될 때마다 값이 초기화된다. 하지만 useRef는 일반적인 자바스크립트 객체이므로 heap 영역에 저장된다. 그래서 어플리케이션이 종료되거나 가비지 컬렉팅 될때까지 참조할 때 마다 같은 메모리 주소를 가지고, 같은 메모리 주소를 가지기 때문에 === 연산이 항상 true를 반환하고, 값이 바뀌어도 리렌더링 되지 않는다.
+
+## useReducer
+- `(state,action) => newState`의 형태로 reducer를 받고 dispatch 메서드와 짝의 형태로 현재 state를 반환한다.
+- 다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우나 다음 state가 이전 state에 의존적인 경우 보통 useState보다 useReducer를 선호한다. 또한 useReducer는 콜백 대신 dispatch를 전달하기 때문에 자세한 업데이트를 트리거 하는 컴포넌트의 성능을 최적화할 수 있다.
+``` javascript
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+    </>
+  );
+}
+```
 
 
-### 사용자 정의 Hook
+
+
+## 사용자 정의 Hook
 - 사용자 정의 Hook은 이름이 use로 시작하는 자바스크립트 함수.
 - 사용자 Hook은 다른 hook을 호출할 수 있다
 - 무엇을 인수로 받아야 하며 필요하다면 무엇을 반환해야 하는지를 사용자가 결정할 수 있다.
@@ -74,3 +121,4 @@ function useFriendStatus(friendID) {
 __reference__
 - https://ko.reactjs.org/docs/hooks-intro.html
 - https://ko.reactjs.org/docs/hooks-state.html
+- https://react.vlpt.us/basic/18-useCallback.html
