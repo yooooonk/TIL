@@ -30,7 +30,7 @@ useEffect(()=>{
 	return ()=>{
     	// clean up
     }
-})
+},[])
 ```
 
 - 함수 컴포넌트 안에서 컴포넌트가 렌더링 된 이후에 side effect를 수행할 수 있다
@@ -42,6 +42,12 @@ useEffect(()=>{
 - useEffect는 렌더링이 실행될 때마다 실행된다. 
 - multiple effect로 관심사를 구분할 수 있다.
 - useEffect의 선택적 인수인 두 번째 인수로 배열을 넘기면, 그 인수가 리렌더링 시에 변경되지 않으면 effect를 건너뛰어 성능 최적화가 가능하다.
+
+### dependency에 따라 달라지는 호출 타이밍
+- useEffect(()=>{  return ()=>{} },[]) : 렌더링 된 후, 언마운트 될 때
+- useEffect(()=>{console.log(value)},[value]) : 마운트, 언마운트, value가 업데이트 될 때, 업데이트되기 전에
+- useEffect(()=>{console.log(value)}) : 리렌더링 될 때마다
+
 ## useMemo
 ``` javascript
 const count = useMemo(() => countActiveUsers(users), [users]);
