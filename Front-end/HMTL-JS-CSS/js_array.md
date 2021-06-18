@@ -1,8 +1,7 @@
 # 자바스크립트 배열 메서드
 
-### 1. 배열 요소를 문자열로 - join
-
-join(separator?: string): string;
+### 1. 배열 요소를 문자열로
+`join(separator?: string): string;`
 
 ``` javascript
     const fruits = ['a','b','c'];
@@ -11,7 +10,8 @@ join(separator?: string): string;
     console.log(jj) // 'abc'
 ```
 
-### 2. 문자열을 배열로 - split(separaotr?:string):T[]
+### 2. 문자열을 배열로
+`split(separaotr?:string):T[]`
 ``` javascript
     const fruits = ['a','b','c'];
     const jj =  fruit.join('')
@@ -19,7 +19,8 @@ join(separator?: string): string;
     console.log(jj) // 'abc'
 ```
 
-### 3. 배열 요소를 거꾸로 - reverse():T[]
+### 3. 배열 요소를 거꾸로
+`reverse():T[]`
 - 원본 배열도 바뀜
 ``` javascript
     const arr = ['a','b','c'];
@@ -29,8 +30,9 @@ join(separator?: string): string;
 	console.log(arr) // ['c','b','a']
 ```
 
-### 4. 배열 자르기 - splice(start: number, deleteCount?: number): T[] 
-- 
+### 4. 배열 자르기
+`splice(start: number, deleteCount?: number): T[]`
+ 
 - start index부터 deleteCount(개수)만큼 자름
 - 잘린 요소 리턴
 - 원본 배열도 바뀜
@@ -48,7 +50,8 @@ join(separator?: string): string;
     
 ```
 
-### 5. 배열 자르기2 - slice(start?: number, end?: number): T[]
+### 5. 배열 자르기2
+`slice(start?: number, end?: number): T[]`
 - end idx 앞에까지 자름
 - 자른! 배열 리턴
 - 원본 배열 변하지 않음
@@ -60,7 +63,8 @@ join(separator?: string): string;
 	console.log(arr) // ['a','b','c','d','e']
 ```
 
-### 6. 조건을 만족하는 첫 번째 인자찾기 -  find(value: T, index: number, array: T[]) => unknown, thisArg?: any): number | undefined
+### 6. 조건을 만족하는 첫 번째 인자찾기
+`find(value: T, index: number, array: T[]) => unknown, thisArg?: any): number | undefined`
 - 첫 번째 인자인 콜백함수에 만족하는 첫 번째 index 리턴
 - 콜백함수는 boolean을 return 해야함
 ```javascript
@@ -80,7 +84,9 @@ join(separator?: string): string;
     console.log(result)//1
 ```
 
-### 7. 조건을 만족하는 모든 인자 찾기 - filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T[];
+### 7. 조건을 만족하는 모든 인자 찾기 
+`filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T[]`
+
 - 첫 번째 인자인 콜백함수에 만족하는 첫 번째 index 리턴
 - 콜백함수는 boolean을 return 해야함
 ``` javascript
@@ -100,7 +106,9 @@ join(separator?: string): string;
     console.log(result)// [{name:'이민혁',score:'100'},{name:'육성재',score:95}]
 ```
 
-### 8. 배열 요소를 조작해 새로운 값으로 변환  - Map(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+### 8. 배열 요소를 조작해 새로운 값으로 변환  
+`Map(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[]`
+
 ``` javascript
 	const students = [
     	{name:'서은광',score:81},
@@ -118,7 +126,9 @@ join(separator?: string): string;
     console.log(result)// [81,100,30,80,90,95]
 ```
   
-### 9. 조건을 만족하는 요소가 있는지 없는지 - some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+### 9. 조건을 만족하는 요소가 있는지 없는지 
+`some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean`
+
 ``` javascript
 	const students = [
     	{name:'서은광',score:81},
@@ -136,7 +146,9 @@ join(separator?: string): string;
     console.log(result)// true
 ```
 
-### 10. 모든 요소가 조건을 충족하는지 - every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+### 10. 모든 요소가 조건을 충족하는지 
+`every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean`
+
  ``` javascript
 	const students = [
     	{name:'서은광',score:81},
@@ -154,7 +166,9 @@ join(separator?: string): string;
     console.log(result)// false
 ```
 
-### 11. 배열의 모든 요소를 누적 - reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T;
+### 11. 배열의 모든 요소를 누적 
+`reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T`
+
 - acc : return으로 누적된 값
 - curr : 배열의 아이템
 ``` javascript
@@ -175,7 +189,9 @@ join(separator?: string): string;
     console.log(result/students.length)
  ```
 
-### 12. 정렬 - sort(compareFn?: (a: T, b: T) => number): this;
+### 12. 정렬
+`sort(compareFn?: (a: T, b: T) => number): this`
+
 ``` javascript
 	// 오름차순	
 	const arr = [1,2,3,4]
