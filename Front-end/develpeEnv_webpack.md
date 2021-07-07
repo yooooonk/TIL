@@ -209,7 +209,7 @@ module.exports = function myebpackLoader(content) {
 - `test`는 로더가 처리해야할 파일의 패턴 - 정규표현식을 사용한다. 위 예제의 경우 모든 자바스크립트 파일마다 로더가 실행됨
 - `use`는 패턴에 걸리면 실행될 로더 함수들을 명시. 배열 뒤에 순서부터 실행됨
 
-## 자주 사용되는 로더
+## 자주 사용하는 로더
 
 ### css-loader, style-loader
 
@@ -230,6 +230,79 @@ module.exports = function myebpackLoader(content) {
 사용하는 이미지 갯수가 많다면 네트웍 리소스를 사용하는 부담이 있고 사이트 성능에 영향을 줄 수도 있다. 만약 한 페이지에서 작은 이미지를 여러개 사용한다면 Data URI Scheme(작은 파일을 Base64로 인코딩하여 문자열 형태로 소스코드에 넣는 형식)를 이용하는 방법이 더 낫다. url-loader는 이런 처리를 자동화해준다.
 `$ npm install -D url-loader`
 ![](https://images.velog.io/images/ouo_yoonk/post/7c0903ca-d507-4a8b-b263-238619146372/image.png)
+
+# 4. 플러그인
+
+로더가 파일 단위로 처리하는 반면 플러그인은 번들된 결과물을 처리한다. 번들된 자바스크립트를 난독화 한다거나 특정 텍스트를 추출하는 용도로 사용한다.
+
+## 플러그인 동작원리 이해 - 커스텀 플러그인 만들기
+
+- 플러그인은 클래스형으로 만든다.
+- webpack.config.js의 plugins에 배열 형태로 들어간다.
+- `compliation`이라는 객체를 이용해 웹팩이 번들링한 결과물에 접근할 수 있다.
+
+**my-webpack-plugin.js**
+
+```javascript
+class MyPlugin {
+  apply(compiler) {
+    compiler.hooks.done.tap('My Plugin', (stats) => {
+      console.log('MyPlugin: done');
+    });
+
+    compiler.plugin('emit', (compilation, callback) => {
+      // 웹팩 내장 플러그인 중 하나인 banner plugin - compilation 객체를 parameter로 갖는다
+      const source = compilation.assets['main.js'].source();
+      console.log(source);
+      callback();
+    });
+  }
+}
+
+module.exports = MyPlugin;
+```
+
+**webpack.config.js**
+![](https://images.velog.io/images/ouo_yoonk/post/05fbe529-c527-4b74-97a3-4c217202f80b/image.png)
+
+## 자주 사용하는 플러그인
+
+### BannerPlugin
+
+- 결과물에 빌드 정보나 커밋 버전같은 걸 추가할 수 있다.
+- 정적 파일들이 잘 배포 됐는지, 캐시를 무력화했는지를 확인하기 위해 사용할 수 있다.
+  **webpack.config.js**
+
+```javascript
+const webpack = require('webpack');
+const childProcess = require('child_process');
+...
+plugins: [
+    new webpack.BannerPlugin({
+      banner: `
+      Build Date:${new Date().toLocaleDateString()}
+      Commit Version:${childProcess.execSync('git rev-parse --short HEAD')}
+      Author:${childProcess.execSync('git config user.name')}
+    `
+    })
+  ]
+```
+
+### Define Plugin
+
+- 같은 소스 코드를 두 환경(개발 환경, 운영 환경)에 배포하기 위해서 환경 의존적인 정보를 소스가 아닌 곳에서 관리하는 것이 좋다. 환경 정보를 관리하는 플러그인
+- 빈 객체를 전달해도 기본적으로 `웹팩 설정의 mode에 설정한 값`이 `process.env.NODEENV`(노드 환경 정보)가 들어간다. "development"를 설정했을 경우 어플리케이션 코드에서 process.env.NODEENV 변수로 접근하면 "development" 값을 얻을 수 있다.
+
+**webpack.config.js**
+
+```javascript
+const webpack = require('webpack');
+
+...
+plugins: [
+    new webpack.DefinePlugin()
+  ]
+```
 
 ---
 
