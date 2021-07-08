@@ -304,6 +304,102 @@ plugins: [
   ]
 ```
 
+### HtmlWebpackPlugin
+
+- HTML 파일을 후처리하는데 사용한다.
+- 이 플러그인으로 빌드하면 HTML파일로 아웃풋에 생성된다.
+- 빌드된 결과물에 ejs 문법을 이용하면 <%= env %>는 전달받은 env 변수 값을 출력한다. HtmlWebpackPlugin은 이 변수에 데이터를 주입시켜 동적으로 HTML 코드를 생성한다.
+- 웹팩으로 빌드한 결과물을 자동으로 로딩하는 코드를 주입해 준다. 때문에 스크립트 로딩 코드도 제거할 수 있다.
+
+```
+$ npm install -D html-webpack-plugin
+```
+
+**webpack.config.js**
+
+```javascript
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+...
+plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      templateParameters: {
+        env: process.env.NODE_ENV === 'development' ? '(개발용)' : ''
+      },
+      minify:
+        process.env.NODE_ENV === 'production'
+          ? {
+              collapseWhitespace: true, // 빈칸 없애기
+              removeComments: true // 주석제거
+            }
+          : false
+    })
+  ]
+
+```
+
+### CleanWebpackPlugin
+
+- 빌드 이전 결과물을 제거하는 플러그인
+- 빌드 결과물은 아웃풋 경로에 모이는데, 이전 빌드내용이 덮여 씌여지면 상관없지만 그렇지 않으면 아웃풋 폴더에 여전히 남아 있을 수 있다.
+
+```
+$ npm install clean-webpack-plugin
+```
+
+**webpack.config.js**
+
+```javascript
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+
+...
+plugins: [
+    new CleanWebpackPlugin()
+  ]
+```
+
+### MiniCssExtractPlugin
+
+- CSS를 별도 파일로 뽑아내는 플러그인
+- 스타일시트가 점점 많아지면 하나의 자바스크립트 결과물로 만드는 것이 부담일 수 있다. 번들 결과에서 스타일시트 코드만 뽑아서 별도의 CSS 파일로 만들어 역할에 따라 파일을 분리하는 것이 좋다. 브라우저에서 큰 파일 하나를 내려받는 것 보다, 여러 개의 작은 파일을 동시에 다운로드하는 것이 더 빠르다. 개발 환경에서는 CSS를 하나의 모듈로 처리해도 상관없지만 프로덕션 환경에서는 분리하는 것이 효과적이다.
+- loader도 플러그인이 제공하는 로더를 사용해야함
+
+```
+$ npm install mini-css-extract-plugin
+```
+
+**webpack.config.js**
+
+```javascript
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+...
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          process.env.NODE_ENV === 'productoin'
+            ? MiniCssExtractPlugin.loader
+            : 'style-loader',
+          'css-loader'
+        ]
+      },
+    ]
+  },
+  plugins: [
+    ...(process.env.NODE_ENV === 'production'
+      ? [
+          new MiniCssExtractPlugin({
+            filename: '[name].css'
+          })
+        ]
+      : [])
+  ]
+
+```
+
 ---
 
 **&#128209; reference**
