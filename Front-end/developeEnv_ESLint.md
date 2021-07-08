@@ -17,7 +17,7 @@ ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로
 - 설치
 - 설정파일 : .eslintrc.js
 - rules : [eslint Rules](https://eslint.org/docs/rules/)
-- **Extensible Config** : 규직을 미리 정해 놓은 것. extends 설정에 추가해서 사용한다. ex] eslint - recommended
+- **Extensible Config** : 규직을 미리 정해 놓은 것. extends 설정에 추가해서 사용한다. ex] eslint - recommended, airbnb, standard
 
 ```
 $ npm i -D eslint
@@ -34,7 +34,17 @@ module.exports = {
 };
 ```
 
-## Rules
+### eslint init
+
+```
+$ npx eslint --init
+```
+
+![](https://images.velog.io/images/ouo_yoonk/post/1299928d-44aa-420b-a4be-642d06802ebb/image.png)
+eslint --init을 하면 설정할 수 있음.
+설정이 완료되면 .exlintrc.js가 아래와 같이 덮어써짐
+
+![](https://images.velog.io/images/ouo_yoonk/post/0f290662-5f05-4c9e-b390-e5ddacc6ab83/image.png)
 
 ---
 
