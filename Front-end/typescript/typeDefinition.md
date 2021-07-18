@@ -173,7 +173,43 @@ const seho:Person={
 |재할당|가능|불가능|
 |목적|구현|데이터를 담기|
 
-따라서, `type`보다는 `interface`로 선언해서 사용하는 것을 추천
+좋은 소프트웨어는 확장이 용이해야하기 때문에 `type`보다는 `interface`로 선언해서 사용하는 것을 추천
+
+# 연산자를 이용한 타입정의
+## Union Type(|)
+하나 이상의 타입을 쓰고 싶을 때, `|` 연산자를 이용해 여러 연산자를 여러 개 연결할 수 있다. (or의 의미)
+
+``` javascript
+function logMessage(value:string| number){ // union type
+    if(typeof value==='number'){     
+        console.log(value.toLocaleString())
+    }
+
+    if(typeof value==='string'){
+        console.log(value.toLowerCase())
+    }
+
+    throw new TypeError('value must be string or number')
+}
+```
+- 타입 추론이 되기 때문에 아래와 같이 해당 타입에 대한 자동완성 기능을 이용할 수 있다.
+![](https://images.velog.io/images/ouo_yoonk/post/7f51d9bf-bc31-4c04-bd4a-c2f2b0771e3f/image.png)
+![](https://images.velog.io/images/ouo_yoonk/post/b6b341d3-a657-4bec-981a-b51c930e965b/image.png)
+
+- interface 두 개를 합쳤을 때, 공통된 속성에만 접근할 수 있다.
+![](https://images.velog.io/images/ouo_yoonk/post/839bd10c-ba45-4b57-afc0-81cca97223c4/image.png)
+
+
+## Intersection Type(&)
+여러 타입을 모두 만족하는 하나의 타이블 의미한다.
+
+![](https://images.velog.io/images/ouo_yoonk/post/66847959-5622-4843-807c-cd7e4a79db21/image.png)
+
+## Union type와 Intersection type의 차이
+- union type으로 선언했을 경우, 그 중 하나에 해당하는 타입으로 사용이 가능하지만, intersection type의 경우 모든 항목을 만족하는 타입을 사용해야 한다.
+![](https://images.velog.io/images/ouo_yoonk/post/27ea5d68-c24d-46a3-8072-724dd8b6bdff/image.png)
+
+
 
 ---
 
