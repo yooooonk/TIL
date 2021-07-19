@@ -209,7 +209,35 @@ function logMessage(value:string| number){ // union type
 - union type으로 선언했을 경우, 그 중 하나에 해당하는 타입으로 사용이 가능하지만, intersection type의 경우 모든 항목을 만족하는 타입을 사용해야 한다.
 ![](https://images.velog.io/images/ouo_yoonk/post/27ea5d68-c24d-46a3-8072-724dd8b6bdff/image.png)
 
+# Enums
+이넘은 특정 값들의 집합을 의미하는 자료형이다.
+이넘을 선언하고 별도의 값을 지정하지 않으면 숫자형 이넘으로 0부터 1씩 증가한다.
 
+``` javascript
+// 숫자형 이넘
+enum Shoes{
+    Nike, //0
+    Adias, //1
+    NewBalance//2
+}
+
+const myShoes = Shoes.Nike
+console.log(myShoes); // 0
+
+// 문자형 이넘
+enum Shoess{
+    Nike = '나이키',
+    Adias = '아디다스',
+    NewBalance = '뉴발란스'
+}
+
+const myShoes = Shoess.Nike
+console.log(myShoes); //나이키
+```
+### 활용
+![](https://images.velog.io/images/ouo_yoonk/post/92bbc5c3-e0d3-41cc-85c5-9808cfd9b40e/image.png)
+
+위와 같이 string type으로 타입을 정의할 경우 yes,no가 아닌 다른 값도 들어와서 예외처리를 할 수 없다. Enum type을 사용하면 지정한 값이 아닌 다른 값에 대해 미리 에러가 발생한다.
 
 ---
 
