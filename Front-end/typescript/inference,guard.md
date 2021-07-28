@@ -57,6 +57,54 @@ var div = document.querySelector('div') as HTMLDivElement;
 div.innerHtext;
 ```
 
+# 타입가드
+타입가드는 타입 단언을 좀 더 깔끔하게 할 수 있도록 도와준다. 타입 가드는 런타임에서의 타입 체크를 컴파일러에게 알려주는 기능이다. `is`키워드를 사용한다.
+
+``` javascript
+interface Developerr{
+    name:string;
+    skill:string;
+}
+
+interface Personn{
+    name:string;
+    age:number;
+}
+
+function introduce() : Developerr|Personn { 
+    return {name:'Tony', age:33, skill:'Iron Making'}
+}
+```
+
+![](https://images.velog.io/images/ouo_yoonk/post/c00b618a-60e1-4e33-b7dd-1f5a670ef90e/image.png)
+
+공통속성아 아닌 타입을 사용하기 위해서 타입단언을 이용해 아래와 같이 사용하면 가독성이 떨어진다.
+
+``` javascript
+if((tonytony as Developerr).skill){
+    var skill = (tonytony as Developerr)
+    console.log(skill)
+}else if ((tony as Person).age){
+    var age = (tonytony as Personn)
+    console.log(age)
+}
+```
+
+`isDeveloper`라는 타입가드를 정의하면 같은 로직을 아래와 같이 사용할 수 있다.
+
+``` javascript
+// 타입가드를 정의
+function isDeveloper(target:Developerr|Personn):target is Developerr {
+    return (target as Developerr).skill !== undefined;
+}
+
+if(isDeveloper(tonytony)){
+    console.log(tonytony.skill)
+}else{
+    console.log(tony.age)
+}
+
+```
 
 ---
 __📑 referece__
