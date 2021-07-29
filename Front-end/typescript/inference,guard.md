@@ -106,6 +106,37 @@ if(isDeveloper(tonytony)){
 
 ```
 
+# 타입호환
+타입 호환이란 타입스크립트 코드에서 특정 타입이 다른 타입에 잘 맞는지를 의미한다. 타입스크립트는 정의되어 있는 속성의 타입에 따라 호환되는지를 확인한다. 이를 구조적 타입시스템이라고 한다.
+
+
+![](https://images.velog.io/images/ouo_yoonk/post/287339b9-0b2d-4a84-b539-20cab580e2c6/image.png)
+
+sum이 add보다 타입구조적으로 더 넓기때문에 sum은 add와 호환이 안됨
+![](https://images.velog.io/images/ouo_yoonk/post/86ca401e-1ff3-4353-b798-c3126ab82d90/image.png)
+
+![](https://images.velog.io/images/ouo_yoonk/post/9999b556-de22-4dca-a0e7-a423b52d31ec/image.png)
+
+
+### 인터페이스 - 클래스의 타입호환
+``` javascript
+interface Named {
+    name: string;
+}
+
+class Person {
+    name: string;
+}
+
+let p: Named;
+// 성공, 구조적 타이핑이기 때문입니다.
+p = new Person();
+```
+### 함수 - 제네릭의 타입호환
+![](https://images.velog.io/images/ouo_yoonk/post/08849795-2711-4066-ad37-c710d74a644d/image.png)
+
+
+
 ---
 __📑 referece__
 - [타입단언](https://hyunseob.github.io/2017/12/12/typescript-type-inteference-and-type-assertion/)
