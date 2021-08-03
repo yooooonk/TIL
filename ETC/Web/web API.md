@@ -19,6 +19,7 @@
     - `navigator` : 브라우저와 운영체제에 대한 정보를 제공한다.
     - `location` : 현재 URL을 읽을 수 있게 해주고 새로운 URL로 변경할 수 있다.
 
+# Document
 ## 브라우저의 좌표  
 ![](https://images.velog.io/images/ouo_yoonk/post/78782879-eacf-4eab-81f6-9b64fb34b1cf/image.png)
 ### getBoundingClientRect
@@ -28,8 +29,15 @@
 - `width와 height` : 요소를 감싸는 네모의 너비, 높이
 
 - 창 기준 : `clientX`  `clientY`
-
 - 문서 기준 : `pageX` `pageY`
+
+- `top` `bottom` : 요소를 감싸는 네모의위쪽 모서리, 아래쪽 모서리의 Y좌표
+- `left` `right` : 요소를 감싸는 네모의 왼쪽 모서리, 오른쪽 모서리의 X좌표
+
+- left = x
+- top = y
+- right = x + width
+- bottom = y + height
 
 ---
 __reference__
