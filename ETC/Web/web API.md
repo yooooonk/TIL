@@ -39,7 +39,14 @@
 - right = x + width
 - bottom = y + height
 
+### client, offset, page, screen의 차이
+`client` : 스크롤을 무시하고 브라우저 페이지에서의 좌표
+`offset` : 스크롤을 포함한 전체 문서를 기준으로 이벤트 대상 객체의 상대적 마우스 좌표
+`page` : 스크롤 화면을 포함해 전체 문서 기준
+`screen`: 모니터 화면에서의 좌표
+
 ---
 __reference__
 - 모던 자바스크립트 튜토리얼(브라우저 환경과 다양한 명세서)
 - 모던 자바스크립트 튜토리얼(좌표)
+- [clinetX, OffsetX, pageX, screenX의 차이](http://megaton111.cafe24.com/2016/11/29/clientx-offsetx-pagex-screenx%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/)
