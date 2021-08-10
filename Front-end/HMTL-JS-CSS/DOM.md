@@ -1,4 +1,6 @@
-![](https://images.velog.io/images/ouo_yoonk/post/c867fb79-0574-4b78-8136-457627dfc580/DOM%EA%B3%BC_Virtual_DOM.png)
+![](https://images.velog.io/images/ouo_yoonk/post/918f983e-2fcf-453e-8298-fdf23e130a88/DOM__n(Document__nObject_n_Model).png)
+
+
 
 # DOM(Document Object Model)
 > HTML이나 XML 문서의 프로그래밍 interface이다. 
@@ -8,6 +10,7 @@
  
 HTML이나 XML Document 구조를 바탕으로 요소들이 화면에 나타나고, 이벤트에 반응하고 값을 입력받는 등의 기능을 수행할 객체들로 실체화 된 형태를 의미한다. 구조화된 nodes와 property와 method를 갖고 있는 objets로 문서를 표현한다. 이들은 웹 페이지를 스크립트 또는 프로그래밍 언어들에서 사용될 수 있게 연결시켜주는 역할을 담당한다. DOM은 javascript를 이용해 명령을 받을 수 있지만 javascript 객체는 아니며, 언어에 종속되지 않고 DOM을 조작할 수 있다. (javascript, 파이썬 beautifulsoup 등) DOM은 웹 페이지의 객체 지향 표현이며, 자바스크립트와 같은 스크립팅 언어를 이용해 DOM을 수정할 수 있다.
 
+
 ## Node
 
 ![](https://media.vlpt.us/images/mollog/post/562dc77f-a541-4cb4-8858-47291c620b87/image.png)
@@ -15,6 +18,8 @@ https://velog.io/@mollog/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%EA%B0%9C%EB%85%90
 
   
 - DOM의 요소들은 node를 상속받기 때문에 textContent, childNodes, firstChild, lastChild, parentNode, cloeNode, appendChild 등 node의 기능을 전부 갖고 있다. 그리고 node는 `eventTarget` 을 상속받기 때문에 addEventListener등의 기능을 갖고 있다.
+- _Event Target method_ : `addEventListner`, `removeEventListner`, `dispatchEvent`
+- html element는 노드고, 노드는 event target이기 때문에 이벤트 관련된 메소드를 사용할 수 있다.
 - 각 요소마다 고유의 기능도 있다. ex) a - href,target, img - src
 - CSS는 CSS Object Model을 가짐. 트리형식. 브라우저는 DOM+CSSOM을 이용해 화면을 그림
 - BOM : Browser Object Model - 브라우저 자체를 다루는 api. ex)alert, setTimeout, ..
@@ -25,9 +30,6 @@ https://velog.io/@mollog/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%EA%B0%9C%EB%85%90
 https://ko.wikipedia.org/wiki/%EB%AC%B8%EC%84%9C_%EA%B0%9D%EC%B2%B4_%EB%AA%A8%EB%8D%B8
 
 > `node`들의 `트리 구조`로 이루어져있다.
-
-
-
 
 
 # Virtual DOM
