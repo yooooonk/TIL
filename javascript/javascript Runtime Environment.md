@@ -20,38 +20,45 @@ V8 엔진은 메모리힙과 콜스택을 가지고 있습니다.
 호출 스택에는 실행되는 코드가 쌓입니다. 스택에 함수가 추가되면 엔진은 그 코드를 파싱하고, 변수들을 힙에 올립니다. 현재 실행되고 있는 함수가 호출 스택의 가장 상단에 위치하는데, 함수가 값을 return하거나 web api를 호출하면 스택에서 제거(pop)되고, 그 다음 함수를 실행합니다. 호출 스택이 완전히 빌 때까지 이 과정을 반복합니다. 스택이 하나이기 때문에(싱글 스레드) 이 동기적이고, 한 번에 한 동작만 수행합니다.
 
 ## Web APIs
-Web API는 event listner, HTTP/AJAX request, timing function(setTimeout) 등
+Web API는 event listner, HTTP/AJAX request, timing function(setTimeout) 등의 기능을 제공합니다. call stack에서 함수가 Web API를 실행하면 스택에서 제거되며, Web API의 콜백 함수는 큐에 저장됩니다.
 
 ## Callback Queue
+콜백큐에는 콜백함수가 저장됩니다. Queue이기 때문에 먼저 들어온 것이 먼저 실행됩니다.(FIFO) 콜백큐에도 두 가지가 있습니다.
+
+
+### Microtask Queue
+Promise나 Mutation Observer의 콜백이 들어옵니다. Task Queue보다 우선순위가 높고, Event Loop는 빌 때까지 call stack에 콜백함수를 넣습니다.
+
+### Task Queue
+일반적인 콜백함수가 들어옵니다. Microtask Queue보다 우선 순위가 낮고, 가장 앞에 있는 콜백 함수만 Call Stack에 들어갑니다.
+
+|Microtask Queue|Task Queue|
+|--|--|
+|Promise, Mutation Observer의 콜백 함수|이외의 콜백함수|
+|우선 순위 높음|우선 순위 낮음|
+|큐가 빌 때까지 event loop가 실행|제일 앞의 task만 실행|
+
+### Render Seqeunce
+변형한 코드를 화면에 업데이트하 위해 주기적으로 호출합니다. Request Animation Frame의 콜백이 전부 실행되면 Render Tree를 그리고 Layout, Paint 과정이 일어납니다.
+예를 들어 아래와 같은 코드를 실행했을 때, 배경 색상이 노란색 되는 이유는 각각의 콜백을 모두 실행한 결과를 화면에 그리기 때문입니다. 
+
+``` javascript
+body.style.backgroundColor = 'red'
+body.style.backgroundColor = 'blue'
+body.style.backgroundColor = 'yellow'
+```
+
 ## Event Loop
+이벤트루프는 Call Stack이 비면 Task Queue의 콜백함수를 Call stack에 넣는 역할을 합니다. 이벤트루프가 아래의 그림처럼 순회합니다. Call stack의 function이 실행하는데 오래걸릴 때 화면에서 아무 변화가 없는 이유는 event loop가 Call stack에 머물러있어 다음 과정인 Render Sequene를 실행하지 못하기 때문입니다.
 
 
+![](https://images.velog.io/images/ouo_yoonk/post/f77438e8-be79-4102-9ee9-b5936fcb1199/image.png)
+출처 [드림코딩 - 프론트엔드 필수 브라우저101](https://academy.dream-coding.com/courses/browser101)
 
-
-webAPI가 실행될 때 콜백함수는 task Queue에 들어감
-call stack과 task Queue를 감시하는 것이 `Event Loop`
-
-call stack이 비었을 때 Event loop가 task Queue의 콜백함수를 call stack에 넣음!!
-
-![](https://images.velog.io/images/ouo_yoonk/post/2382dada-b69f-4e90-b824-777308505d13/image.png)
-
-- Task Queue
-- Microtask Queue
-    - 프로미스에 등록된 콜백(then), mutation observer의 콜백이 들어옴
-- Render Sequence
-    - 우리가 변형한 코드를 업데이트 하기 위해 주기적으로 호출하는 순서
-    - Request Animation Frame--의 콜백
-
-- 60fps - 브라우저는 1초동안 60개 프레임을 보여주도록 노력
-- 이벤트루프는 저 순서로 순회
-    - call stack에 뭐가 있으면 멈추어ㅣㅆ음
-    - Render 들릴 ㅅ수도 있고 아닐 수도 있음
-    - Microtask Queue가 빌 때까지 콜스택에 쌓음
-        - microtask queue에 잇는 동안 계속 작업이 들어오면 거기에 멈춰있음
-    - task queue는 아이템 하나만 콜스택으로 보냄
 
 
 ---
 __📑 referece__
 - [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
 - [The Javascript Runtime Environment](https://olinations.medium.com/the-javascript-runtime-environment-d58fa2e60dd0)
+- [MDN - 동시성 모델과 이벤트 루프](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)
